@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import coil.load
 import com.jo.e_commerceapp.R
 import com.jo.e_commerceapp.databinding.FragmentSignupBinding
@@ -26,5 +27,8 @@ class SignupFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.backgroundImage.load(R.drawable.login_bg)
+        binding.containedButton.setOnClickListener {
+            it.findNavController().navigate(R.id.action_signupFragment_to_homeFragment)
+        }
     }
 }
