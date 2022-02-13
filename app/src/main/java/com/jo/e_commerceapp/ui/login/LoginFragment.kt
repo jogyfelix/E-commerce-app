@@ -26,7 +26,7 @@ class LoginFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.backgroundImage.load(R.drawable.login_bg)
+        binding.backgroundImage.load(R.drawable.white_bg)
         binding.containedButton.setOnClickListener {
             it.findNavController().navigate(R.id.action_loginFragment_to_signupFragment)
         }
